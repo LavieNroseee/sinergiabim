@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)file:///C:/Users/Usuario/Downloads/landing.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sinergia - Creamos Sinergia para Escalar tu Visión</title>
+<link href="./Sinergia - Creamos Sinergia para Escalar tu Visión_files/css2" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg-primary:#080816;
+  --bg-secondary:#0d0d24;
+  --bg-card:#111133;
+  --purple-accent:#7c3aed;
+  --purple-light:#a78bfa;
+  --blue-accent:#3b82f6;
+  --blue-light:#60a5fa;
+  --text-primary:#ffffff;
+  --text-secondary:#b0b0cc;
+  --text-muted:#7070a0;
+  --gradient-purple:linear-gradient(135deg,#7c3aed,#3b82f6);
+  --gradient-card:linear-gradient(135deg,#5b21b6,#4338ca,#6d28d9);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg-primary);color:var(--text-primary);overflow-x:hidden;line-height:1.6}
+
+/* NAV */
+.nav{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,8,22,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(124,58,237,.1)}
+.logo-left,.logo-right{display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px;letter-spacing:.5px}
+.logo-left span{color:#60a5fa}
+.logo-right span{color:#a78bfa}
+.logo-dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.logo-left .logo-dot{background:#60a5fa}
+.logo-right .logo-dot{background:#a78bfa}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 24px 60px;position:relative}
+.hero::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(124,58,237,.12) 0%,transparent 70%);pointer-events:none}
+.hero-tagline{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--text-muted);margin-bottom:24px;font-weight:600}
+.hero-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(36px,6vw,64px);font-weight:900;line-height:1.1;margin-bottom:16px;max-width:700px}
+.hero-title .highlight{background:linear-gradient(90deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:underline;text-decoration-color:#a78bfa;text-underline-offset:6px}
+
+.typewriter-container{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(22px,3.5vw,36px);font-weight:700;margin-bottom:8px;min-height:50px;display:flex;justify-content:center;align-items:center;gap:8px}
+.typewriter-static{color:var(--text-primary)}
+.typewriter-word{color:#a78bfa;border-right:3px solid #a78bfa;padding-right:4px;animation:blink .7s step-end infinite;min-width:100px;display:inline-block;text-align:left}
+@keyframes blink{50%{border-color:transparent}}
+.hero-line2{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(22px,3.5vw,36px);font-weight:700;color:var(--text-primary);margin-bottom:32px}
+.hero-line2 span{color:#60a5fa}
+
+.hero-desc{font-size:17px;color:var(--text-secondary);max-width:680px;margin:0 auto 40px;line-height:1.7}
+.hero-desc strong{color:var(--text-primary);text-decoration:underline;text-decoration-color:#7c3aed;text-underline-offset:4px}
+
+/* VIDEO PLACEHOLDER */
+.video-container{position:relative;width:min(90%,700px);aspect-ratio:16/9;border-radius:16px;overflow:hidden;margin:0 auto;border:1px solid rgba(124,58,237,.2);background:#0a0a20}
+.video-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.4)}
+.play-btn{width:72px;height:72px;border-radius:50%;background:var(--blue-accent);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .3s,box-shadow .3s}
+.play-btn:hover{transform:scale(1.1);box-shadow:0 0 30px rgba(59,130,246,.5)}
+.play-btn svg{width:28px;height:28px;fill:#fff;margin-left:4px}
+.video-time{position:absolute;top:16px;right:16px;background:rgba(0,0,0,.7);padding:4px 12px;border-radius:6px;font-size:13px;font-weight:600}
+
+/* DIVIDER */
+.section-divider{width:100%;height:6px;background:var(--gradient-purple);margin:0}
+
+/* METHODOLOGY SECTION */
+.methodology{padding:80px 24px;text-align:center;background:var(--bg-secondary)}
+.methodology-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:900;margin-bottom:16px}
+.methodology-subtitle{font-size:16px;color:var(--text-secondary);max-width:640px;margin:0 auto 48px;line-height:1.7}
+
+/* TABS */
+.tabs-wrapper{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-bottom:56px}
+.tab-btn{padding:12px 28px;border-radius:999px;border:1.5px solid rgba(124,58,237,.3);background:transparent;color:var(--text-secondary);font-size:14px;font-weight:600;cursor:pointer;transition:all .3s;font-family:'Inter',sans-serif}
+.tab-btn:hover{border-color:var(--purple-accent);color:#fff}
+.tab-btn.active{background:var(--gradient-purple);border-color:transparent;color:#fff;box-shadow:0 4px 20px rgba(124,58,237,.4)}
+
+/* STEPS */
+.steps-container{max-width:780px;margin:0 auto}
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+.step{margin-bottom:56px;text-align:center}
+.step-number{font-size:15px;font-weight:800;color:var(--blue-accent);margin-bottom:8px}
+.step-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(22px,3vw,30px);font-weight:800;margin-bottom:14px}
+.step-desc{font-size:15px;color:var(--text-secondary);max-width:600px;margin:0 auto 20px;line-height:1.7}
+.step-cost{display:inline-block;padding:6px 16px;border-radius:8px;background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#f87171;font-size:13px;font-weight:700;margin-bottom:16px}
+
+/* STEP ILLUSTRATIONS */
+.step-illustration{width:min(100%,600px);margin:0 auto;border-radius:20px;overflow:hidden;position:relative}
+.illus-checklist{background:var(--gradient-card);padding:32px;border-radius:20px}
+.illus-checklist-inner{background:#fff;border-radius:14px;padding:24px 28px;position:relative}
+.illus-checklist-inner::before{content:'';position:absolute;top:-14px;left:50%;transform:translateX(-50%);width:36px;height:36px;border-radius:50%;background:#1e1e3f;display:flex;align-items:center;justify-content:center;border:3px solid #2d2d5e}
+.illus-checklist-inner::after{content:'⚙';position:absolute;top:-10px;left:50%;transform:translateX(-50%);font-size:18px;line-height:28px}
+.checklist-item{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #eee}
+.checklist-item:last-child{border:none}
+.check-circle{width:22px;height:22px;border-radius:50%;border:2px solid var(--blue-accent);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.check-circle::after{content:'';display:block;width:8px;height:5px;border-left:2px solid var(--blue-accent);border-bottom:2px solid var(--blue-accent);transform:rotate(-45deg);margin-top:-2px}
+.checklist-bar{height:8px;border-radius:4px;background:#e0e0e8;flex:1}
+.checklist-bar.w1{width:80%}.checklist-bar.w2{width:65%}.checklist-bar.w3{width:90%}.checklist-bar.w4{width:55%}.checklist-bar.w5{width:75%}.checklist-bar.w6{width:60%}
+
+.illus-chart{background:var(--gradient-card);padding:32px;border-radius:20px}
+.illus-chart-inner{background:#161630;border-radius:14px;padding:24px;position:relative}
+.chart-header{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.chart-avatar{width:32px;height:32px;border-radius:50%;background:var(--purple-accent);display:flex;align-items:center;justify-content:center}
+.chart-avatar svg{width:18px;height:18px;fill:#fff}
+.chart-bars-row{display:flex;gap:10px;margin-top:8px}
+.chart-lines{display:flex;flex-direction:column;gap:4px}
+.chart-line{height:6px;border-radius:3px;background:#3a3a6a}
+.chart-line.l1{width:100px}.chart-line.l2{width:70px}
+.chart-bars{display:flex;align-items:flex-end;gap:16px;height:120px;justify-content:center;padding-top:20px}
+.chart-bar{width:100px;border-radius:8px 8px 0 0;transition:height .6s}
+.chart-bar.b1{height:60%;background:#3b82f6}
+.chart-bar.b2{height:75%;background:#7c6cfa}
+.chart-bar.b3{height:95%;background:#c084fc}
+.chart-bar.b4{height:80%;background:#60a5fa}
+
+.illus-calendar{background:var(--gradient-card);padding:32px;border-radius:20px}
+.illus-calendar-inner{background:#fff;border-radius:14px;padding:20px;color:#333}
+.cal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.cal-title{font-size:14px;font-weight:700;color:#333}
+.cal-dots{display:flex;gap:6px}
+.cal-dot{width:10px;height:10px;border-radius:50%}
+.cal-dot.red{background:#ef4444}.cal-dot.yellow{background:#eab308}.cal-dot.green{background:#22c55e}
+.cal-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.cal-cell{aspect-ratio:1.4;border:1px solid #eee;border-radius:6px;padding:4px;font-size:11px;font-weight:600;color:#666;position:relative}
+.cal-bar{height:5px;border-radius:3px;margin-top:4px}
+.cal-bar.cb1{background:#3b82f6;width:90%}
+.cal-bar.cb2{background:#c084fc;width:70%}
+.cal-bar.cb3{background:#60a5fa;width:80%}
+.cal-bar.cb4{background:#f0abfc;width:50%}
+
+.illus-meeting{background:var(--gradient-card);padding:32px;border-radius:20px}
+.illus-meeting-inner{background:#1a1a36;border-radius:14px;overflow:hidden}
+.meeting-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.meeting-cell{background:#252550;padding:24px 20px;font-size:13px;font-weight:700}
+.meeting-cell.label-mentor{color:#f87171}
+.meeting-cell.label-you{color:#a78bfa}
+.meeting-dots{display:flex;gap:10px;justify-content:center;padding:16px}
+.meeting-dot{width:14px;height:14px;border-radius:50%;background:#444}
+.meeting-dot.active{background:#ef4444}
+
+/* AGENDAR BUTTON */
+.btn-agendar{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:999px;background:rgba(124,58,237,.15);border:1.5px solid rgba(124,58,237,.4);color:#a78bfa;font-size:13px;font-weight:700;cursor:pointer;transition:all .3s;font-family:'Inter',sans-serif;margin-top:8px}
+.btn-agendar:hover{background:rgba(124,58,237,.3);border-color:#7c3aed;transform:translateY(-2px)}
+.btn-agendar svg{width:16px;height:16px;fill:currentColor}
+
+/* CTA */
+.cta{padding:80px 24px;text-align:center;background:var(--bg-primary)}
+.cta-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:900;margin-bottom:16px}
+.cta-desc{font-size:16px;color:var(--text-secondary);max-width:580px;margin:0 auto 36px;line-height:1.7}
+.cta-btn{display:inline-flex;align-items:center;gap:10px;padding:18px 44px;border-radius:999px;background:#fff;color:#0a0a1a;font-size:16px;font-weight:800;cursor:pointer;border:none;transition:all .3s;font-family:'Plus Jakarta Sans',sans-serif}
+.cta-btn:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(255,255,255,.2)}
+.cta-btn svg{width:20px;height:20px}
+
+/* FOOTER */
+.footer-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(124,58,237,.4),transparent)}
+.footer{padding:60px 40px 40px;background:var(--bg-primary)}
+.footer-top{display:flex;flex-wrap:wrap;gap:60px;margin-bottom:40px}
+.footer-brand{max-width:360px}
+.footer-brand-name{font-family:'Plus Jakarta Sans',sans-serif;font-size:28px;font-weight:900;margin-bottom:12px;letter-spacing:1px}
+.footer-brand-name span{color:var(--purple-accent)}
+.footer-brand-desc{font-size:14px;color:var(--text-muted);line-height:1.7}
+.footer-col h4{font-size:14px;font-weight:800;margin-bottom:16px;letter-spacing:.5px}
+.footer-col a{display:block;font-size:14px;color:var(--text-muted);text-decoration:none;margin-bottom:10px;transition:color .2s}
+.footer-col a:hover{color:var(--text-primary)}
+.footer-social{display:flex;gap:12px;margin-top:16px}
+.footer-social a{width:40px;height:40px;border-radius:50%;background:#1a1a36;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.footer-social a:hover{background:var(--purple-accent)}
+.footer-social svg{width:18px;height:18px;fill:var(--text-muted)}
+.footer-social a:hover svg{fill:#fff}
+.footer-bottom{border-top:1px solid rgba(124,58,237,.1);padding-top:24px;text-align:center;font-size:13px;color:var(--text-muted)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav{padding:16px 20px}
+  .hero{padding:100px 20px 40px}
+  .methodology{padding:60px 20px}
+  .tabs-wrapper{gap:8px}
+  .tab-btn{padding:10px 18px;font-size:13px}
+  .footer-top{flex-direction:column;gap:32px}
+  .footer{padding:40px 20px 30px}
+  .meeting-grid{grid-template-columns:1fr 1fr}
+  .chart-bars{gap:10px}
+  .chart-bar{width:60px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="logo-left">
+    <span class="logo-dot"></span>
+    <span>ADINOVA</span>
+  </div>
+  <div class="logo-right">
+    <span>KAIZEN BEAM</span>
+    <span class="logo-dot"></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="hero-tagline">TU ÉXITO, NUESTRA MISIÓN</p>
+  <h1 class="hero-title">Creamos <span class="highlight">Sinergia</span> para Escalar tu Visión</h1>
+
+  <div class="typewriter-container">
+    <span class="typewriter-static">Integramos tu</span>
+    <span class="typewriter-word" id="typewriter">Equipo</span>
+    <span class="typewriter-static">en Obra</span>
+  </div>
+  <p class="hero-line2">Casos Prácticos <span>BIM / VDC</span></p>
+
+  <p class="hero-desc">
+    Integramos equipos, optimizamos procesos y desarrollamos alianzas estratégicas para llevarte al siguiente nivel operativo, táctico y estratégico mediante nuestro proceso de <strong>Sinergia</strong>.
+  </p>
+
+  <p style="font-size:14px;font-weight:700;color:var(--blue-accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:20px">PASO 1: DESCUBRE NUESTRA METODOLOGÍA</p>
+  <div style="width:60px;height:3px;background:var(--gradient-purple);margin:0 auto 28px;border-radius:2px"></div>
+
+  <div class="video-container">
+    <div class="video-overlay">
+      <div class="play-btn">
+        <svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"></polygon></svg>
+      </div>
+    </div>
+    <span class="video-time">03:34</span>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- METHODOLOGY -->
+<section class="methodology">
+  <h2 class="methodology-title">Nuestro Paso A Paso Para Llevarte Al Siguiente Nivel</h2>
+  <p class="methodology-subtitle">Creamos un ecosistema que integra empresas, profesionales y proyectos dentro de un entorno de networking de alto valor.</p>
+
+  <div class="tabs-wrapper">
+    <button class="tab-btn active" data-tab="entrenamiento">Entrenamiento</button>
+    <button class="tab-btn" data-tab="consultor-desarrollo">Consultor de Desarrollo</button>
+    <button class="tab-btn" data-tab="consultor-principal">Consultor Principal</button>
+    <button class="tab-btn" data-tab="alianza">Alianza</button>
+    <button class="tab-btn" data-tab="convenio">Convenio</button>
+  </div>
+
+  <div class="steps-container">
+
+    <!-- ENTRENAMIENTO -->
+    <div class="tab-content active" id="entrenamiento">
+      <div class="step">
+        <p class="step-number">1 .</p>
+        <h3 class="step-title">Introducción y Presentación</h3>
+        <p class="step-desc">Dirigido a profesionales que recién empiezan o que ya tienen conocimiento pero aún no cuentan con experiencia práctica. Se presenta el alcance completo del proceso de entrenamiento y todo lo que el participante necesita saber.</p>
+        <span class="step-cost">Este proceso tiene un costo de inversión</span>
+        <div class="illus-checklist">
+          <div class="illus-checklist-inner">
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w1"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w2"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w3"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w4"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w5"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w6"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">2 .</p>
+        <h3 class="step-title">Etapa Asincrónica: Conocimiento Fundamental BIM</h3>
+        <p class="step-desc">Los primeros dos módulos de nuestra plataforma que preparan a los participantes con lo esencial y fundamental de la metodología y los modelos BIM de proyectos para alcanzar el nivel necesario.</p>
+        <div class="illus-chart">
+          <div class="illus-chart-inner">
+            <div class="chart-header">
+              <div class="chart-avatar"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"></path></svg></div>
+              <div class="chart-lines"><div class="chart-line l1"></div><div class="chart-line l2"></div></div>
+            </div>
+            <div class="chart-bars">
+              <div class="chart-bar b1"></div>
+              <div class="chart-bar b2"></div>
+              <div class="chart-bar b3"></div>
+              <div class="chart-bar b4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">3 .</p>
+        <h3 class="step-title">Etapa Asincrónica: Integración del Modelo y Gestión de Obra</h3>
+        <p class="step-desc">Módulos 3, 4 y 5 donde se integra el modelo BIM como herramienta para los procesos de gestión de obra, profundizando en los conocimientos necesarios para su aplicación práctica.</p>
+        <div class="illus-checklist">
+          <div class="illus-checklist-inner">
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w3"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w1"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w5"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w2"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w4"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w6"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">4 .</p>
+        <h3 class="step-title">Solicitud de Integración a Casos Prácticos</h3>
+        <p class="step-desc">Una vez aprobadas las evaluaciones de las etapas asincrónicas, los participantes solicitan su integración vía correo. Se coordina su certificación y se mapea su perfil para asignarle una ruta de aprendizaje personalizada.</p>
+        <div class="illus-meeting">
+          <div class="illus-meeting-inner">
+            <div class="meeting-grid">
+              <div class="meeting-cell label-mentor">Mentor</div>
+              <div class="meeting-cell label-you">Tú</div>
+              <div class="meeting-cell"></div>
+              <div class="meeting-cell"></div>
+            </div>
+            <div class="meeting-dots">
+              <div class="meeting-dot"></div>
+              <div class="meeting-dot active"></div>
+              <div class="meeting-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">5 .</p>
+        <h3 class="step-title">Integración en Casos Prácticos en Vivo</h3>
+        <p class="step-desc">Sesiones en vivo donde los participantes se integran en casos prácticos para aprender de forma aplicada el conocimiento adquirido en la etapa asincrónica, trabajando con proyectos reales.</p>
+        <div class="illus-chart">
+          <div class="illus-chart-inner">
+            <div class="chart-header">
+              <div class="chart-avatar"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"></path></svg></div>
+              <div class="chart-lines"><div class="chart-line l1"></div><div class="chart-line l2"></div></div>
+            </div>
+            <div class="chart-bars">
+              <div class="chart-bar b1"></div>
+              <div class="chart-bar b2"></div>
+              <div class="chart-bar b3"></div>
+              <div class="chart-bar b4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">6 .</p>
+        <h3 class="step-title">Escalar al Siguiente Nivel</h3>
+        <p class="step-desc">El participante se integra a un proyecto real con un rol BIM. Puede seguir escalando a otros roles, equipos y casos prácticos, continuando su formación dentro del proceso de sinergia.</p>
+        <div class="illus-checklist">
+          <div class="illus-checklist-inner">
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w1"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w3"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w5"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w2"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w4"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w6"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONSULTOR DE DESARROLLO -->
+    <div class="tab-content" id="consultor-desarrollo">
+      <div class="step">
+        <p class="step-number">1 .</p>
+        <h3 class="step-title">¿Qué es un Consultor de Desarrollo? Requisitos</h3>
+        <p class="step-desc">Un profesional con experiencia, conocimiento de valor o ambos, que se integra en nuestro entorno para colaborar en etapas de desarrollo. La ruta es personalizada según su perfil, aporte y alcance.</p>
+        <div class="illus-checklist">
+          <div class="illus-checklist-inner">
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w1"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w2"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w3"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w4"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w5"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w6"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">2 .</p>
+        <h3 class="step-title">Solicitud y Llamada de Pre-evaluación</h3>
+        <p class="step-desc">El profesional agenda una llamada de pre-evaluación para verificar si su perfil califica dentro de este proceso. Se evalúa su conocimiento y experiencia de valor.</p>
+        <button class="btn-agendar" onclick="window.open(&#39;#&#39;,&#39;_blank&#39;)">
+          <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"></path></svg>
+          Agendar tu llamada
+        </button>
+        <div class="illus-chart" style="margin-top:20px">
+          <div class="illus-chart-inner">
+            <div class="chart-header">
+              <div class="chart-avatar"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"></path></svg></div>
+              <div class="chart-lines"><div class="chart-line l1"></div><div class="chart-line l2"></div></div>
+            </div>
+            <div class="chart-bars">
+              <div class="chart-bar b1"></div>
+              <div class="chart-bar b2"></div>
+              <div class="chart-bar b3"></div>
+              <div class="chart-bar b4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">3 .</p>
+        <h3 class="step-title">Sesión Zoom: Mapeo de Oportunidades, Perfil y Beneficios</h3>
+        <p class="step-desc">Se mapean las oportunidades, necesidades e intereses para alinearnos y establecer un proceso sostenible de colaboración con el consultor postulante.</p>
+        <div class="illus-meeting">
+          <div class="illus-meeting-inner">
+            <div class="meeting-grid">
+              <div class="meeting-cell label-mentor">Mentor</div>
+              <div class="meeting-cell label-you">Tú</div>
+              <div class="meeting-cell"></div>
+              <div class="meeting-cell"></div>
+            </div>
+            <div class="meeting-dots">
+              <div class="meeting-dot"></div>
+              <div class="meeting-dot active"></div>
+              <div class="meeting-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">4 .</p>
+        <h3 class="step-title">Presentación de Plan de Trabajo para Integración en Equipo</h3>
+        <p class="step-desc">Según tu perfil, conciliamos el tipo de equipo donde te integrarás. Te presentamos el caso práctico, el plan de trabajo y tu forma de participación dentro del equipo.</p>
+        <div class="illus-calendar">
+          <div class="illus-calendar-inner">
+            <div class="cal-header"><span class="cal-title">Junio de 2024</span><div class="cal-dots"><div class="cal-dot red"></div><div class="cal-dot yellow"></div><div class="cal-dot green"></div></div></div>
+            <div class="cal-grid">
+              <div class="cal-cell">1<div class="cal-bar cb1"></div><div class="cal-bar cb4" style="margin-top:2px"></div></div>
+              <div class="cal-cell">2</div><div class="cal-cell">3</div>
+              <div class="cal-cell">4<div class="cal-bar cb3"></div></div><div class="cal-cell">5</div>
+              <div class="cal-cell">6<div class="cal-bar cb4"></div></div>
+              <div class="cal-cell">7<div class="cal-bar cb1"></div></div><div class="cal-cell">8</div><div class="cal-cell">9</div>
+              <div class="cal-cell">10<div class="cal-bar cb1"></div></div>
+              <div class="cal-cell">11<div class="cal-bar cb4"></div></div><div class="cal-cell">12</div>
+              <div class="cal-cell">13<div class="cal-bar cb3"></div></div><div class="cal-cell">14</div><div class="cal-cell">15</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">5 .</p>
+        <h3 class="step-title">Integración a tu Primer Equipo y Caso Práctico</h3>
+        <p class="step-desc">Te integras a tu primer equipo y caso práctico, participando activamente en el desarrollo de proyectos reales dentro de nuestro ecosistema colaborativo.</p>
+        <div class="illus-chart">
+          <div class="illus-chart-inner">
+            <div class="chart-header">
+              <div class="chart-avatar"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"></path></svg></div>
+              <div class="chart-lines"><div class="chart-line l1"></div><div class="chart-line l2"></div></div>
+            </div>
+            <div class="chart-bars">
+              <div class="chart-bar b1"></div>
+              <div class="chart-bar b2"></div>
+              <div class="chart-bar b3"></div>
+              <div class="chart-bar b4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">6 .</p>
+        <h3 class="step-title">Escala tu Siguiente Nivel</h3>
+        <p class="step-desc">Cada plan de trabajo dura dos meses. Al completar cada etapa, renuevas bajo mejores condiciones y beneficios, escalando a nuevos casos prácticos y subequipos de forma progresiva.</p>
+        <div class="illus-checklist">
+          <div class="illus-checklist-inner">
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w1"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w3"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w5"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w2"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w4"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w6"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONSULTOR PRINCIPAL -->
+    <div class="tab-content" id="consultor-principal">
+      <div class="step">
+        <p class="step-number">1 .</p>
+        <h3 class="step-title">¿Qué es un Consultor Principal? Requisitos</h3>
+        <p class="step-desc">Un profesional experto con dominio y experiencia en una de las áreas BIM, Lean o VDC. Se considera un experto por su nivel de conocimiento y experiencia en la aplicación de proyectos de alto nivel.</p>
+        <div class="illus-checklist">
+          <div class="illus-checklist-inner">
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w1"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w2"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w3"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w4"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w5"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w6"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">2 .</p>
+        <h3 class="step-title">Solicitud y Llamada de Pre-evaluación</h3>
+        <p class="step-desc">Agenda una llamada para evaluar tu perfil profesional y determinar cómo tu experiencia y conocimiento se alinean con nuestras oportunidades de colaboración.</p>
+        <button class="btn-agendar" onclick="window.open(&#39;#&#39;,&#39;_blank&#39;)">
+          <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"></path></svg>
+          Agendar tu llamada
+        </button>
+        <div class="illus-chart" style="margin-top:20px">
+          <div class="illus-chart-inner">
+            <div class="chart-header">
+              <div class="chart-avatar"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"></path></svg></div>
+              <div class="chart-lines"><div class="chart-line l1"></div><div class="chart-line l2"></div></div>
+            </div>
+            <div class="chart-bars">
+              <div class="chart-bar b1"></div>
+              <div class="chart-bar b2"></div>
+              <div class="chart-bar b3"></div>
+              <div class="chart-bar b4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">3 .</p>
+        <h3 class="step-title">Sesión Zoom: Mapeo de Oportunidades, Perfil y Beneficios</h3>
+        <p class="step-desc">Conciliamos cuáles son las oportunidades que tenemos y cómo alinearte dentro de la aplicación práctica. Se definen beneficios de creación de marca profesional, integración a empresas y networking de alto valor.</p>
+        <div class="illus-meeting">
+          <div class="illus-meeting-inner">
+            <div class="meeting-grid">
+              <div class="meeting-cell label-mentor">Mentor</div>
+              <div class="meeting-cell label-you">Tú</div>
+              <div class="meeting-cell"></div>
+              <div class="meeting-cell"></div>
+            </div>
+            <div class="meeting-dots">
+              <div class="meeting-dot"></div>
+              <div class="meeting-dot active"></div>
+              <div class="meeting-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">4 .</p>
+        <h3 class="step-title">Establecer Primer Plan de Trabajo</h3>
+        <p class="step-desc">Se establece una metodología de colaboración progresiva y sinérgica a nivel técnico y comercial, definiendo el primer plan de trabajo de colaboración mutua según tu perfil.</p>
+        <div class="illus-calendar">
+          <div class="illus-calendar-inner">
+            <div class="cal-header"><span class="cal-title">Junio de 2024</span><div class="cal-dots"><div class="cal-dot red"></div><div class="cal-dot yellow"></div><div class="cal-dot green"></div></div></div>
+            <div class="cal-grid">
+              <div class="cal-cell">1<div class="cal-bar cb1"></div><div class="cal-bar cb4" style="margin-top:2px"></div></div>
+              <div class="cal-cell">2</div><div class="cal-cell">3</div>
+              <div class="cal-cell">4<div class="cal-bar cb3"></div></div><div class="cal-cell">5</div>
+              <div class="cal-cell">6<div class="cal-bar cb4"></div></div>
+              <div class="cal-cell">7<div class="cal-bar cb1"></div></div><div class="cal-cell">8</div><div class="cal-cell">9</div>
+              <div class="cal-cell">10<div class="cal-bar cb1"></div></div>
+              <div class="cal-cell">11<div class="cal-bar cb4"></div></div><div class="cal-cell">12</div>
+              <div class="cal-cell">13<div class="cal-bar cb3"></div></div><div class="cal-cell">14</div><div class="cal-cell">15</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">5 .</p>
+        <h3 class="step-title">Convocar tu Primer Equipo</h3>
+        <p class="step-desc">Como profesional clave, integras un primer equipo donde cumplirás tus objetivos profesionales y comerciales dentro del proceso de desarrollo.</p>
+        <div class="illus-chart">
+          <div class="illus-chart-inner">
+            <div class="chart-header">
+              <div class="chart-avatar"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"></path></svg></div>
+              <div class="chart-lines"><div class="chart-line l1"></div><div class="chart-line l2"></div></div>
+            </div>
+            <div class="chart-bars">
+              <div class="chart-bar b1"></div>
+              <div class="chart-bar b2"></div>
+              <div class="chart-bar b3"></div>
+              <div class="chart-bar b4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">6 .</p>
+        <h3 class="step-title">Formalizar Plan de Trabajo</h3>
+        <p class="step-desc">Se formaliza un plan de trabajo que define el alcance, beneficios y la forma de colaboración continua dentro del ecosistema de sinergia.</p>
+        <div class="illus-meeting">
+          <div class="illus-meeting-inner">
+            <div class="meeting-grid">
+              <div class="meeting-cell label-mentor">Mentor</div>
+              <div class="meeting-cell label-you">Tú</div>
+              <div class="meeting-cell"></div>
+              <div class="meeting-cell"></div>
+            </div>
+            <div class="meeting-dots">
+              <div class="meeting-dot"></div>
+              <div class="meeting-dot active"></div>
+              <div class="meeting-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">7 .</p>
+        <h3 class="step-title">Escalar al Siguiente Nivel: Alianza</h3>
+        <p class="step-desc">Se escala al siguiente nivel de colaboración, transitando hacia una alianza estratégica con mayores responsabilidades y beneficios dentro del ecosistema.</p>
+        <div class="illus-checklist">
+          <div class="illus-checklist-inner">
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w1"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w3"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w5"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w2"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w4"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w6"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ALIANZA -->
+    <div class="tab-content" id="alianza">
+      <div class="step">
+        <p class="step-number">1 .</p>
+        <h3 class="step-title">¿Qué es una Alianza? Requisitos</h3>
+        <p class="step-desc">Una empresa que brinda servicios BIM, gestión de obra o proyectos, o un profesional que ha encontrado un nivel de oportunidad de colaboración. Ambos buscan integrar esfuerzos y recursos en un proceso sinérgico.</p>
+        <div class="illus-checklist">
+          <div class="illus-checklist-inner">
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w1"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w2"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w3"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w4"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w5"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w6"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">2 .</p>
+        <h3 class="step-title">Llamada de Pre-evaluación</h3>
+        <p class="step-desc">Programa una llamada para evaluar el grado de oportunidad y las posibilidades de colaboración entre ambas partes dentro de nuestro ecosistema.</p>
+        <button class="btn-agendar" onclick="window.open(&#39;#&#39;,&#39;_blank&#39;)">
+          <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"></path></svg>
+          Agendar tu llamada
+        </button>
+        <div class="illus-chart" style="margin-top:20px">
+          <div class="illus-chart-inner">
+            <div class="chart-header">
+              <div class="chart-avatar"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"></path></svg></div>
+              <div class="chart-lines"><div class="chart-line l1"></div><div class="chart-line l2"></div></div>
+            </div>
+            <div class="chart-bars">
+              <div class="chart-bar b1"></div>
+              <div class="chart-bar b2"></div>
+              <div class="chart-bar b3"></div>
+              <div class="chart-bar b4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">3 .</p>
+        <h3 class="step-title">Sesión Zoom: Mapeo de Oportunidades y Colaboración</h3>
+        <p class="step-desc">Validamos el proceso de integración y colaboración. Se definen los intereses, las oportunidades identificadas y cómo se va a establecer la alianza estratégica.</p>
+        <div class="illus-meeting">
+          <div class="illus-meeting-inner">
+            <div class="meeting-grid">
+              <div class="meeting-cell label-mentor">Mentor</div>
+              <div class="meeting-cell label-you">Tú</div>
+              <div class="meeting-cell"></div>
+              <div class="meeting-cell"></div>
+            </div>
+            <div class="meeting-dots">
+              <div class="meeting-dot"></div>
+              <div class="meeting-dot active"></div>
+              <div class="meeting-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">4 .</p>
+        <h3 class="step-title">Sistema de Seguimiento y Control</h3>
+        <p class="step-desc">Se establecen equipos de control para definir el área técnica y comercial, gestionando los esfuerzos y recursos para sacar adelante los servicios dentro del proceso de sinergia.</p>
+        <div class="illus-chart">
+          <div class="illus-chart-inner">
+            <div class="chart-header">
+              <div class="chart-avatar"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"></path></svg></div>
+              <div class="chart-lines"><div class="chart-line l1"></div><div class="chart-line l2"></div></div>
+            </div>
+            <div class="chart-bars">
+              <div class="chart-bar b1"></div>
+              <div class="chart-bar b2"></div>
+              <div class="chart-bar b3"></div>
+              <div class="chart-bar b4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">5 .</p>
+        <h3 class="step-title">Establecer Plan de Trabajo y Convenio de Alianza</h3>
+        <p class="step-desc">Se formaliza un plan de trabajo conjunto y un convenio de alianza que define los términos de la colaboración, los beneficios mutuos y el alcance de los servicios.</p>
+        <div class="illus-calendar">
+          <div class="illus-calendar-inner">
+            <div class="cal-header"><span class="cal-title">Junio de 2024</span><div class="cal-dots"><div class="cal-dot red"></div><div class="cal-dot yellow"></div><div class="cal-dot green"></div></div></div>
+            <div class="cal-grid">
+              <div class="cal-cell">1<div class="cal-bar cb1"></div><div class="cal-bar cb4" style="margin-top:2px"></div></div>
+              <div class="cal-cell">2</div><div class="cal-cell">3</div>
+              <div class="cal-cell">4<div class="cal-bar cb3"></div></div><div class="cal-cell">5</div>
+              <div class="cal-cell">6<div class="cal-bar cb4"></div></div>
+              <div class="cal-cell">7<div class="cal-bar cb1"></div></div><div class="cal-cell">8</div><div class="cal-cell">9</div>
+              <div class="cal-cell">10<div class="cal-bar cb1"></div></div>
+              <div class="cal-cell">11<div class="cal-bar cb4"></div></div><div class="cal-cell">12</div>
+              <div class="cal-cell">13<div class="cal-bar cb3"></div></div><div class="cal-cell">14</div><div class="cal-cell">15</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">6 .</p>
+        <h3 class="step-title">Convocar Equipo</h3>
+        <p class="step-desc">Se convoca un equipo para operar el plan de trabajo, integrando participantes y empresas donde se desarrollarán todos los beneficios y procesos establecidos.</p>
+        <div class="illus-chart">
+          <div class="illus-chart-inner">
+            <div class="chart-header">
+              <div class="chart-avatar"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"></path></svg></div>
+              <div class="chart-lines"><div class="chart-line l1"></div><div class="chart-line l2"></div></div>
+            </div>
+            <div class="chart-bars">
+              <div class="chart-bar b1"></div>
+              <div class="chart-bar b2"></div>
+              <div class="chart-bar b3"></div>
+              <div class="chart-bar b4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">7 .</p>
+        <h3 class="step-title">Escalar al Siguiente Nivel</h3>
+        <p class="step-desc">De forma progresiva se escalan los niveles comerciales, de integración y beneficios, para establecer en conjunto una unidad de negocio o sociedad según el caso.</p>
+        <div class="illus-checklist">
+          <div class="illus-checklist-inner">
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w1"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w3"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w5"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w2"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w4"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w6"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONVENIO -->
+    <div class="tab-content" id="convenio">
+      <div class="step">
+        <p class="step-number">1 .</p>
+        <h3 class="step-title">¿Qué es un Convenio? Requisitos</h3>
+        <p class="step-desc">Una empresa del sector construcción o expedientes que quiere formar su equipo BIM e implementar la metodología de manera progresiva. Debe ser una empresa activa en proyectos de edificación y aceptar un periodo de 4 a 6 meses de madurez antes de aplicar en sus proyectos.</p>
+        <span class="step-cost">Este proceso tiene un costo de inversión</span>
+        <div class="illus-checklist">
+          <div class="illus-checklist-inner">
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w1"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w2"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w3"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w4"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w5"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w6"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">2 .</p>
+        <h3 class="step-title">Llamada de Pre-evaluación</h3>
+        <p class="step-desc">Se evalúan los detalles de la organización, su disposición al cambio y los requisitos necesarios para iniciar el proceso de convenio de colaboración.</p>
+        <button class="btn-agendar" onclick="window.open(&#39;#&#39;,&#39;_blank&#39;)">
+          <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"></path></svg>
+          Agendar tu llamada
+        </button>
+        <div class="illus-chart" style="margin-top:20px">
+          <div class="illus-chart-inner">
+            <div class="chart-header">
+              <div class="chart-avatar"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"></path></svg></div>
+              <div class="chart-lines"><div class="chart-line l1"></div><div class="chart-line l2"></div></div>
+            </div>
+            <div class="chart-bars">
+              <div class="chart-bar b1"></div>
+              <div class="chart-bar b2"></div>
+              <div class="chart-bar b3"></div>
+              <div class="chart-bar b4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">3 .</p>
+        <h3 class="step-title">Sesión Zoom de Evaluación</h3>
+        <p class="step-desc">Sesiones para definir los intereses, evaluar la organización y establecer las bases del proceso de colaboración bajo convenio.</p>
+        <div class="illus-meeting">
+          <div class="illus-meeting-inner">
+            <div class="meeting-grid">
+              <div class="meeting-cell label-mentor">Mentor</div>
+              <div class="meeting-cell label-you">Tú</div>
+              <div class="meeting-cell"></div>
+              <div class="meeting-cell"></div>
+            </div>
+            <div class="meeting-dots">
+              <div class="meeting-dot"></div>
+              <div class="meeting-dot active"></div>
+              <div class="meeting-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">4 .</p>
+        <h3 class="step-title">Conciliación y Formalización de Convenio</h3>
+        <p class="step-desc">Se establece y formaliza un convenio de colaboración y plan de trabajo para tu organización, definiendo los términos, alcances y la metodología de implementación.</p>
+        <div class="illus-calendar">
+          <div class="illus-calendar-inner">
+            <div class="cal-header"><span class="cal-title">Junio de 2024</span><div class="cal-dots"><div class="cal-dot red"></div><div class="cal-dot yellow"></div><div class="cal-dot green"></div></div></div>
+            <div class="cal-grid">
+              <div class="cal-cell">1<div class="cal-bar cb1"></div><div class="cal-bar cb4" style="margin-top:2px"></div></div>
+              <div class="cal-cell">2</div><div class="cal-cell">3</div>
+              <div class="cal-cell">4<div class="cal-bar cb3"></div></div><div class="cal-cell">5</div>
+              <div class="cal-cell">6<div class="cal-bar cb4"></div></div>
+              <div class="cal-cell">7<div class="cal-bar cb1"></div></div><div class="cal-cell">8</div><div class="cal-cell">9</div>
+              <div class="cal-cell">10<div class="cal-bar cb1"></div></div>
+              <div class="cal-cell">11<div class="cal-bar cb4"></div></div><div class="cal-cell">12</div>
+              <div class="cal-cell">13<div class="cal-bar cb3"></div></div><div class="cal-cell">14</div><div class="cal-cell">15</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">5 .</p>
+        <h3 class="step-title">Sesiones de Mapeo y Diagnóstico Organizacional</h3>
+        <p class="step-desc">De 2 a 3 sesiones de diagnóstico profundo de tu organización bajo el proceso de convenio ya firmado, evaluando capacidades, equipos y proyectos actuales.</p>
+        <div class="illus-meeting">
+          <div class="illus-meeting-inner">
+            <div class="meeting-grid">
+              <div class="meeting-cell label-mentor">Mentor</div>
+              <div class="meeting-cell label-you">Tú</div>
+              <div class="meeting-cell"></div>
+              <div class="meeting-cell"></div>
+            </div>
+            <div class="meeting-dots">
+              <div class="meeting-dot"></div>
+              <div class="meeting-dot active"></div>
+              <div class="meeting-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">6 .</p>
+        <h3 class="step-title">Elaborar Plan de Trabajo de Implementación</h3>
+        <p class="step-desc">Se elabora un plan de trabajo detallado para el primer periodo de implementación de la metodología BIM dentro de tu organización, basado en el diagnóstico y mapeo realizados.</p>
+        <div class="illus-chart">
+          <div class="illus-chart-inner">
+            <div class="chart-header">
+              <div class="chart-avatar"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"></path></svg></div>
+              <div class="chart-lines"><div class="chart-line l1"></div><div class="chart-line l2"></div></div>
+            </div>
+            <div class="chart-bars">
+              <div class="chart-bar b1"></div>
+              <div class="chart-bar b2"></div>
+              <div class="chart-bar b3"></div>
+              <div class="chart-bar b4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">7 .</p>
+        <h3 class="step-title">Implementar en tu Primer Proyecto Piloto</h3>
+        <p class="step-desc">Se implementa la metodología BIM dentro de tu primer proyecto piloto, aplicando todo el sistema de colaboración desarrollado durante las etapas anteriores.</p>
+        <div class="illus-checklist">
+          <div class="illus-checklist-inner">
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w1"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w3"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w5"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w2"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w4"></div></div>
+            <div class="checklist-item"><div class="check-circle"></div><div class="checklist-bar w6"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-number">8 .</p>
+        <h3 class="step-title">Escalar al Siguiente Nivel</h3>
+        <p class="step-desc">Se escala a otros proyectos y alcances de mayor nivel, expandiendo de forma progresiva la implementación BIM dentro de toda tu organización.</p>
+        <div class="illus-chart">
+          <div class="illus-chart-inner">
+            <div class="chart-header">
+              <div class="chart-avatar"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"></path></svg></div>
+              <div class="chart-lines"><div class="chart-line l1"></div><div class="chart-line l2"></div></div>
+            </div>
+            <div class="chart-bars">
+              <div class="chart-bar b1"></div>
+              <div class="chart-bar b2"></div>
+              <div class="chart-bar b3"></div>
+              <div class="chart-bar b4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2 class="cta-title">¿Listo para crear Sinergia juntos?</h2>
+  <p class="cta-desc">Únete a la red de profesionales y empresas que están transformando su manera de operar, escalar y colaborar en sus proyectos.</p>
+  <button class="cta-btn" onclick="window.open(&#39;#&#39;,&#39;_blank&#39;)">
+    Coordinar con un asesor
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+  </button>
+</section>
+
+<!-- FOOTER -->
+<div class="footer-divider"></div>
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-brand-name">SINERGIA<span> .</span></div>
+      <p class="footer-brand-desc">Desarrollamos ecosistemas empresariales de alto rendimiento a través de alianzas estratégicas, tecnología y optimización de procesos.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegación</h4>
+      <a href="file:///C:/Users/Usuario/Downloads/landing.html#">Inicio</a>
+      <a href="file:///C:/Users/Usuario/Downloads/landing.html#">Nuestra Metodología</a>
+      <a href="file:///C:/Users/Usuario/Downloads/landing.html#">Casos de Éxito</a>
+      <a href="file:///C:/Users/Usuario/Downloads/landing.html#">Sobre Nosotros</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="file:///C:/Users/Usuario/Downloads/landing.html#">Términos y condiciones</a>
+      <a href="file:///C:/Users/Usuario/Downloads/landing.html#">Política de Privacidad</a>
+      <a href="file:///C:/Users/Usuario/Downloads/landing.html#">Aviso Legal</a>
+    </div>
+    <div class="footer-col">
+      <h4>Conecta</h4>
+      <div class="footer-social">
+        <a href="file:///C:/Users/Usuario/Downloads/landing.html#"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></a>
+        <a href="file:///C:/Users/Usuario/Downloads/landing.html#"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+        <a href="file:///C:/Users/Usuario/Downloads/landing.html#"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Sinergia. Todos los derechos reservados.</p>
+    <p style="margin-top:4px">Diseñado para escalar con propósito.</p>
+  </div>
+</footer>
+
+<script>
+// TABS
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+  });
+});
+
+// TYPEWRITER
+const words=['Perfil','Equipo','Empresa'];
+let wordIndex=0,charIndex=0,isDeleting=false;
+const el=document.getElementById('typewriter');
+function type(){
+  const current=words[wordIndex];
+  if(isDeleting){
+    el.textContent=current.substring(0,charIndex-1);
+    charIndex--;
+  }else{
+    el.textContent=current.substring(0,charIndex+1);
+    charIndex++;
+  }
+  let speed=isDeleting?60:120;
+  if(!isDeleting&&charIndex===current.length){
+    speed=1800;
+    isDeleting=true;
+  }else if(isDeleting&&charIndex===0){
+    isDeleting=false;
+    wordIndex=(wordIndex+1)%words.length;
+    speed=400;
+  }
+  setTimeout(type,speed);
+}
+type();
+</script>
+
+
+</body></html>
